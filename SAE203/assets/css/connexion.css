@@ -1,0 +1,174 @@
+main {
+
+}
+
+.container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100vh;
+    background-color: #f4f4f4;
+
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#connexion, #inscription {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding: 2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 20px 5px rgba(0,0,0,0.05); /* Augmente légèrement l'ombre pour donner plus de profondeur */
+    transition: box-shadow 0.3s ease-in-out;
+    animation: fadeIn 1s;
+}
+
+#connexion:hover, #inscription:hover {
+    box-shadow: 0 5px 15px 5px rgba(0,0,0,0.1);
+}
+
+#connexion label.block, #inscription label.block {
+    margin-bottom: 1em;
+    font-weight: bold;
+    color: #333;
+    display: block;
+}
+
+
+#connexion input[type="text"], #connexion input[type="password"], #inscription input[type="text"], #inscription input[type="password"], #inscription input[type="email"] {
+    margin-bottom: 1.5em;
+    padding: 12px;
+    border: 0;
+    border-radius: 30px;
+    box-shadow: 0 3px 10px 0 var(--shadow);
+    transition: border-color 0.2s ease-in-out;
+    display: block;
+    width: 100%;
+    font-size: 1em;
+}
+
+#connexion input:focus, #inscription input:focus {
+    border: #007BFF 1px solid; /* Utilise une couleur d'accent pour le focus */
+    outline: none;
+}
+
+
+#connexion input[type="submit"], #inscription input[type="submit"] {
+    background-color: white;
+    width: 100%;
+    padding: 12px;
+    border: black 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 3);
+    transition: transform 0.3s ease-in-out;
+    font-size: 1em;
+    color: black;
+}
+
+#connexion input[type="submit"]:hover, #inscription input[type="submit"]:hover {
+    background-color: var(--complement);
+    transform: translate(-5px, -5px);
+    box-shadow: #000000 5px 5px 0;
+    transition: 0.1s;
+    position: relative;
+    color: white;
+}
+
+#connexion input[type="submit"]::placeholder, #inscription input[type="submit"]::placeholder {
+    font-family: 'Montserrat', serif;
+}
+
+.remember{
+    margin-bottom: 1em;
+}
+
+.flip{
+    background-color: white;
+    padding: 12px;
+    border: #555555 1px solid;
+    margin-top: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 3);
+    transition: transform 0.3s ease-in-out;
+    font-size: 0.8em;
+    color: black;
+}
+
+.flip:hover{
+    background-color: var(--secondColor);
+    transform: translate(-5px, -5px);
+    box-shadow: #000000 5px 5px 0;
+    transition: 0.1s;
+    position: relative;
+    color: white;
+}
+
+/* flip card */
+.flip-card {
+    perspective: 1000px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 350px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-card-front {
+    z-index: 2;
+    background: white;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    background: white;
+}
+
+.flip-card .flip-card-inner.active {
+    transform: rotateY(180deg);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#username_error {
+    color: red;
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: 0.8em;
+}

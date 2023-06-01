@@ -1,0 +1,158 @@
+main {
+    width: 90%;
+    margin: auto;
+    padding-top: 80px; /* Ajustez cette valeur pour donner suffisamment d'espace en haut pour votre en-tête fixe */
+    display: grid;
+    gap: 20px;
+}
+
+.recipe-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 120px;
+}
+
+.coach-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.coach-card {
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondColor);
+    text-align: center;
+    transform: scale(1);
+    transition: ease var(--transitionDuration);
+    box-shadow: 0 4px 8px 0 var(--shadow);
+}
+
+.coach-card:hover, .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px 0 var(--shadow);
+    transition: ease 0.2s;
+
+}
+
+.coach-cards a{
+    text-decoration: none;
+    background-color: var(--mainColor);
+    padding: 0.5em;
+    border-radius: 3px;
+    margin-top: 1em;
+}
+
+.coach-cards:hover {
+    color: white;
+}
+
+#anto-card{
+    grid-column: 3/4;
+
+}
+
+#paris-card{
+    grid-column: 2/3;
+}
+
+.coach-card h2 {
+    color: var(--mainColor);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.coach-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.coach-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.coach-card li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: var(--mainColor);
+}
+
+
+
+.card {
+    box-shadow: 0 4px 8px 0 var(--shadow);
+    padding: 16px;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.recipe-cards a {
+    text-decoration: none;
+    margin: 0 1em;
+
+}
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+}
+.card h2 {
+    font-size: 24px;
+    font-family: Montserrat, serif;
+    color: var(--secondColor);
+}
+.login-signup-link {
+    margin: 2em 0;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 2em;
+}
+
+.login-signup-link a {
+    background-color: white;
+    padding: 12px;
+    border: black 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 3);
+    transition: transform 0.3s ease-in-out;
+    font-size: 1em;
+    color: black;
+    text-decoration: none;
+}
+
+.login-signup-link a:hover {
+    background-color: var(--complement);
+    transform: translate(-3px, -3px);
+    box-shadow: #000000 3px 3px 0;
+    transition: 0.1s;
+    position: relative;
+    color: white;
+}
+
+/* CSS pour les écrans jusqu'à 600px de largeur */
+@media only screen and (max-width: 600px) {
+
+    .recipe-cards, .coach-cards {
+        grid-template-columns: 1fr;
+    }
+
+    #anto-card, #paris-card {
+        grid-column: 1/2;
+    }
+}
+

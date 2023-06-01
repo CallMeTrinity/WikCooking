@@ -1,0 +1,520 @@
+body {
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.presentation {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.tableUser {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableUser td,
+.tableUser th {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.tableUser th {
+    background-color: var(--mainColor);
+    color: var(--secondColor);
+}
+
+.tableUser tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tableUser tr:hover {
+    background-color: #ddd;
+}
+
+.email-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    margin: 3em auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.email-container {
+    margin-top: 20px;
+    overflow: auto;
+    max-height: 500px;
+}
+
+.email-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.email-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-right: 10px;
+
+}
+
+.email-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.email-buttons button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.email-buttons .btn-reply .fa-reply {
+    color: var(--complement);
+}
+
+.email-buttons .btn-delete .fa-trash {
+    color: var(--secondColor);
+}
+
+.email-buttons .btn-reply:hover {
+    transform: scale(1.2)
+
+}
+
+.email-buttons .btn-delete:hover {
+    transform: scale(1.2)
+}
+
+.email-from {
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.email-date {
+    color: #999;
+    font-size: 12px;
+}
+
+.email-message {
+    color: #666;
+    font-size: 14px;
+    margin-top: 10px;
+    word-wrap: break-word;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out, opacity 0.1s ease-out;
+}
+
+.instruction {
+
+}
+
+.tableRecipe {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin: 0  auto 3em;
+}
+
+.tableRecipe th, .tableRecipe td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.tableRecipe th {
+    background-color: var(--secondColor);
+    color: white;
+}
+
+.tableRecipe tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tableRecipe tr:hover {
+    background-color: #ddd;
+}
+
+.instruction {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+th.asc::after {
+    content: "↑";
+}
+
+th.desc::after {
+    content: "↓";
+}
+
+.tableRecipe th:hover {
+    cursor: pointer;
+    background-color: var(--hover);
+}
+
+.tableRecipe th.asc, .tableRecipe th.desc {
+    background-color: var(--complement);
+}
+
+.instruction {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.instruction.active {
+    max-width: 100%;
+    white-space: normal;
+    background: white;
+    z-index: 10;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    padding: 10px;
+}
+
+
+
+#defaultSortButton {
+    margin: 10px 0;
+    padding: 5px 10px;
+    background-color: var(--secondColor);
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: ease 0.2s;
+    display: block;
+    width: 90.9%;
+    align-self: center;
+
+
+}
+
+#defaultSortButton:hover {
+    background-color: var(--complement);
+    transform: scale(1.1);
+    transition: ease 0.2s;
+}
+
+#myInput {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+#myInput:focus {
+    outline: none;
+    border: 1px solid var(--secondColor);
+}
+
+#myInput::placeholder {
+    color: #999;
+    font-style: italic;
+}
+.tableRecipe td:nth-child(5) {
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tableRecipe td:nth-child(4) {
+    width: calc(100% - 650px);
+}
+
+
+.profile-card {
+    width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 3em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background: #ffffff;
+    transition: all 0.3s ease-in-out;
+    order: -1;
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-name {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.user-email, .user-role {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.user-role {
+    color: #666;
+}
+
+.edit-profile {
+    display: none;
+    width: 90%;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 1.2em;
+    transition: all 0.3s ease-in-out;
+}
+
+#editButton, #saveButton {
+    padding: 15px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+#editButton:hover, #saveButton:hover {
+    background-color: #45a049;
+}
+
+#saveButton {
+    display: none;
+}
+
+.editing {
+    background-color: #FFFFCC;
+}
+
+input[disabled]{
+    background-color: white;
+    border: none;
+    text-align: center;
+}
+/* RESET */
+a.tout {
+    position: absolute;
+    left: 0;
+    display: block;
+    grid-column: 1;
+}
+.disquerouge{
+    border: red 1px solid;
+    height: 6em;
+    left: -1px;
+    width: 10.1em;
+    position: absolute;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 0 40px 0 darkred;
+    z-index: 1000;
+    transition: 0.01s;
+
+
+}
+
+.btn:active .disquerouge{
+    box-shadow: 0 10px 0 darkred;
+    transform: translateY(30px);
+    transition: 0.01s;
+}
+
+.btn:active .carrered{
+    transform: scaleY(0);
+    transition: 0.01s;
+
+}
+
+.btn{
+    position: relative;
+}
+
+.carrered{
+    border: darkred 1px solid;
+    height: 2.7em;
+    width: 10em;
+    background-color: darkred;
+    position: absolute;
+    left: 0.0em;
+    top: 2.6em;
+    z-index: 10;
+    transition: 0.01s;
+
+}
+
+.rouge{
+    position: absolute;
+    left: 10em;
+}
+
+.gris{
+    position: absolute;
+    left: 9em;
+    top: 1.5em;
+}
+
+.disquegris{
+    border: #8c8c8c 1px solid;
+    height: 8em;
+    width: 12em;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #8c8c8c;
+    box-shadow: 0 15px 0 #6c6c6c;
+    z-index: 2;
+}
+.reset_database{
+    position: relative;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 300px 3fr;
+    text-align: left;
+}
+
+.reset_database p{
+    padding: 2em;
+    font-weight: bold;
+    font-size: 2em;
+    grid-column: 2;
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    main {
+        width: 95%;
+        padding-top: 50px;
+    }
+
+    .presentation {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    .profile-card {
+        width: 90%;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .user-name {
+        font-size: 1.8em;
+    }
+
+    .user-email, .user-role {
+        font-size: 1.2em;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    main {
+        width: 100%;
+        padding-top: 30px;
+    }
+
+    .presentation {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .profile-card {
+        width: 100%;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .user-name {
+        font-size: 1.5em;
+    }
+
+    .user-email, .user-role {
+        font-size: 1em;
+    }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+
+
+    .tableUser, .tableRecipe {
+        width: 100%;
+        border: 0;
+    }
+
+    .tableUser thead, .tableRecipe thead {
+        display: none;
+    }
+
+    .tableUser tr, .tableRecipe tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .tableUser td, .tableUser th, .tableRecipe td, .tableRecipe th {
+        display: block;
+        text-align: left;
+    }
+
+    .tableUser td::before, .tableRecipe td::before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+}

@@ -1,0 +1,4 @@
+faire un systeme d'étoile de note fonctionnel
+
+question :
+modifie autofill

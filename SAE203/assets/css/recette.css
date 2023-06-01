@@ -1,0 +1,193 @@
+main {
+    margin-top: 100px;
+}
+
+.contenu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 2em;
+    padding: 1em;
+}
+
+article.flip-card {
+    background-color: white;
+    border: var(--secondColor) solid 2px;
+    border-radius: 5px;
+    box-shadow: 5px 3px 5px var(--shadow);
+    padding: 1em;
+    margin: 0 auto;
+    color: black;
+    width: 400px;
+    height: 500px;
+}
+
+
+.card_img_container {
+    width: 100%;
+    height: 200px;
+    overflow: clip;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.card_header img {
+    width: 100%;
+}
+
+.card_header {
+    display: flex;
+    align-items: center;
+    flex-flow: wrap;
+    flex-direction: column;
+}
+
+.card_header h2 {
+    font-family: 'Montserrat', serif;
+    margin-bottom: 1em;
+    color: var(--secondColor);
+    font-weight: bolder;
+}
+
+div.contenu_recette {
+    padding: 1em;
+    font-family: Roboto, monospace;
+    line-height: 1.5em;
+    height: 5em;
+}
+
+
+/* Flip card */
+
+.flip-card {
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    position: relative;
+}
+
+.flip-card .flip-card-front,
+.flip-card .flip-card-back {
+    -webkit-backface-visibility: hidden; /* for better browser compatibility */
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.flip-card .flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.flip-card.active {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front {
+    width: 100%;
+    height: 100%;
+}
+
+.flip-card-front h2{
+    margin-top: 1em;
+}
+.flip-card-back {
+    background-color: var(--secondColor);
+    padding: 1em;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.flip-card-back ul {
+    list-style: none; /* remove default list styling */
+    padding: 1em; /* add some padding around the list */
+    text-align: left; /* align text to the left */
+    max-width: 80%; /* restrict width of the list */
+    margin: 0 auto; /* center the list */
+    background-color: #f9f9f9; /* light background for contrast */
+    border-radius: 5px; /* round the corners */
+    box-shadow: 0px 2px 5px 0px var(--shadow); /* subtle drop shadow */
+    width : 100%;
+}
+
+.flip-card-back ul li {
+    padding: 0.5em 0; /* space out the list items */
+    border-bottom: 1px solid #ccc; /* add a subtle line between items */
+    font-size: 1.5em; /* slightly larger text */
+    font-family: 'Grocery', monospace;
+
+}
+
+.flip-card-back ul li:last-child {
+    border-bottom: none; /* remove the line from the last item */
+}
+
+
+.btn_flip-card {
+    text-decoration: none;
+    color: black;
+    background-color: var(--secondColor);
+    transition: background-color 0.5s;
+    padding: 0.5em;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.flip-card.active .btn_flip-card {
+    background-color: var(--mainColor);
+    transition: background-color 0.5s;
+}
+
+.btn_flip-card:hover, .flip-card.active .btn_flip-card:hover {
+    background-color: var(--complement);
+}
+
+#sortingOptions {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#sortBy {
+    width: 100%;
+    max-width: 800px; /* Vous pouvez changer cette valeur pour ajuster la largeur maximale */
+    padding: 15px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--mainColor);
+    color: #444;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: 0 2px 5px var(--shadow);
+}
+
+#sortBy:focus {
+    outline: none;
+    box-shadow: 0 2px 5px var(--shadow);
+}
+
+#sortBy > option {
+    font-size: 18px;
+}
+
+
+@media (max-width: 768px) {
+    main.contenu {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+

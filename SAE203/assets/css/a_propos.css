@@ -1,0 +1,117 @@
+main{
+    margin: 7% 10% 10% 10%;
+    text-align: justify;
+}
+
+.cuisinier{
+    height: 400px;
+
+}
+.cuisinierdiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 7em;
+}
+
+/* Section Commentaire */
+aside.commentaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Formulaire de commentaire */
+aside.commentaire form {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 2em;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+aside.commentaire form input[type="email"],
+aside.commentaire form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+aside.commentaire form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+aside.commentaire form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.comments{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(2 , 1fr);
+    grid-gap: 3em;
+    margin: 1em 10% 3em 10%;
+}
+
+.comment{
+    border: var(--secondColor) 1px solid;
+    border-radius: 5px;
+
+    padding: 0.7em 1.5em 0.7em 1.5em;
+}
+
+.comment hr{
+    border: 1px solid var(--secondColor);
+    margin: 5px 0 5px 0;
+}
+
+#submitComment{
+    background-color: var(--secondColor);
+    border-radius: 3px;
+    transition: ease 0.2s;
+}
+
+#submitComment:hover{
+    background-color: var(--complement);
+    transform: scale(1.05);
+    transition: ease 0.2s;
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        margin: 7% 5% 10% 5%;
+    }
+
+    .cuisinierdiv {
+        flex-direction: column;
+
+
+    }
+
+
+    .cuisinier{
+        transform: scale(0.8);
+        width: 500px;
+        height: 500px;
+    }
+
+    aside.commentaire form {
+        width: 90%;
+    }
+
+    .comments {
+        grid-template-columns: 1fr;
+    }
+}

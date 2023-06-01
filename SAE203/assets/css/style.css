@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&family=Roboto&display=swap');
+@font-face {
+    font-family: "Grocery";
+    src: url("/assets/font/Holland_Land.ttf") format("truetype");
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --mainColor : whitesmoke;
+    --hover : rgba(255, 111, 97, 0.5);
+    --secondColor : #ff6f61;
+    --shadow : #c2c2c2;
+    --complement : #00909e;
+    --transitionDuration : 0.2s;
+
+}
+
+body  {
+    font-family: Roboto, sans-serif;
+}
+
+/* Header */
+
+#header {
+    background-color: var(--mainColor);
+    box-shadow: 0 5px 5px #c2c2c2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: Montserrat, serif;
+    max-height: 64px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+
+}
+
+#header a {
+    text-decoration: none;
+    color: black;
+}
+.menu {
+    display: flex;
+    align-items: center;
+}
+.menu ul{
+    list-style: none;
+}
+
+.menu ul li {
+    display: inline;
+    margin-left: 3em;
+    background-color: var(--mainColor);
+    padding: 0.5em;
+    transition: ease 0.2s;
+    border-radius: 3px;
+
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu ul li:hover {
+    border: black;
+    background-color: var(--hover);
+    transition: ease 0.2s;
+}
+#header img {
+    width: 60px;
+    height: 60px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 3em;
+}
+.logo span {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+}
+.compte {
+    margin-right: 3em;
+    transition: ease 0.2s;
+}
+.compte img:hover {
+    transform: scale(1.3);
+    transition: ease 0.2s;
+}
+
+.compte a {
+
+}
+/* main */
+
+
+
+/* Footer */
+#navigation{
+    grid-column: 1/2;
+    text-align: center;
+    margin-top: 1em;
+}
+
+#reseau {
+    grid-column: 2/3;
+    text-align: center;
+    margin-top: 1em;
+}
+#contactfooter{
+    display: flex;
+    position: relative;
+    grid-column: 3/4;
+    justify-content: center;
+
+}
+#mentionlegale{
+    grid-column: 1/4;
+    text-align: center;
+}
+
+.titreNavigation{
+    margin-top: 1em;
+    font-weight: bolder;
+}
+
+#navigation ul{
+    margin-top: 1em;
+
+}
+
+#navigation ul li{
+    margin-top: 0.5em;
+
+}
+
+#navigation ul li a{
+    text-decoration: none;
+    font-family: Montserrat, serif;
+    color: #5e5e5e;
+    display: block;
+    width: 130px;
+    margin: 0 auto;
+    padding: 0.3em;
+    border-radius: 5px;
+    border: 0;
+    background-color: var(--mainColor);
+}
+
+#navigation ul li a:hover{
+    transform: translate(-2px, -2px);
+    box-shadow: #000000 2px 2px 0;
+    transition: 0.1s;
+    position: relative;
+}
+
+.separation{
+    color: white;
+    border: 1px solid white;
+    margin-top: 2em;
+    min-width: 80%;
+    margin-bottom: 2em;
+}
+
+
+
+.logoReseau{
+
+    width: 40px;
+    height: 40px;
+    transition: ease 0.2s;
+    margin-left: 0.5em;
+    margin-top: 1em;
+}
+
+.logoReseau:hover {
+    transform: scale(1.2);
+    transition: ease 0.2s;
+}
+
+#footerform {
+    position: relative;
+    display: flex;
+    margin: 1em;
+    flex-wrap: wrap;
+    width: 350px;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: var(--secondColor);
+    color: var(--mainColor);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    font-family: Montserrat, serif;
+}
+
+#mail,
+#message {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+#btnsubmit,
+#btnreset {
+    background-color: white;
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 3);
+}
+
+
+
+
+#btnreset{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    box-shadow: none;
+    transition: 0.1s;
+
+
+}
+#btnsubmit{
+    position: relative;
+    right: 0;
+    bottom: 0;
+    box-shadow: none;
+    transition: 0.1s;
+
+
+}
+
+#btnsubmit:hover{
+    transform: translate(-5px, -5px);
+    box-shadow: #000000 5px 5px 0;
+    transition: 0.1s;
+    position: relative;
+}
+
+#btnreset:hover {
+    background-color: #000000;
+    transform: translate(-5px, -5px);
+    transition: 0.1s;
+    color: #ffffff;
+    position: relative;
+    box-shadow: #ffffff 5px 5px 0;
+
+
+}
+#message::placeholder,
+#mail::placeholder,
+#btnsubmit,
+#btnreset{
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+}
+
+#contactfooter p{
+    margin-top: 1em;
+}
+
+
+/* Pour les appareils avec une largeur maximale de 600px */
+@media only screen and (max-width: 600px) {
+
+    /* Header */
+
+    #header {
+        flex-direction: column;
+        max-height: 200px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    main {
+        margin-top: 200px !important;
+    }
+
+    .menu ul li {
+        display: block;
+        margin-left: 0;
+        margin-bottom: 1em;
+        position: relative;
+    }
+
+    .menu ul li a {
+        display: block;
+        width: 100%;
+    }
+    .logo {
+        display: none;
+    }
+    .compte {
+        align-self: flex-end;
+    }
+
+    /* Footer */
+
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+    }
+    #navigation, #reseau, #contactfooter {
+        grid-column: 1/2;
+    }
+    #mentionlegale {
+        grid-column: 1/2;
+    }
+    #footerform {
+        width: 100%;
+    }
+}
+
+/* Pour les appareils avec une largeur maximale de 900px et supérieure à 600px */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+
+    /* Header */
+
+    #header {
+        flex-wrap: wrap;
+    }
+    .menu ul li {
+        margin-left: 1em;
+    }
+    .logo {
+        margin-left: 2em;
+    }
+    .compte {
+        margin-right: 2em;
+    }
+
+    /* Footer */
+
+    footer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+    #navigation, #reseau {
+        grid-column: 1/3;
+    }
+    #contactfooter {
+        grid-column: 1/3;
+    }
+    #mentionlegale {
+        grid-column: 1/3;
+    }
+    #footerform {
+        width: 75%;
+    }
+}
+
+
